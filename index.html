@@ -42,19 +42,19 @@
                 <a href="#">Home</a>
             </li>
             <!--<li>-->
-                <!--<a href="#">Shortcuts</a>-->
+            <!--<a href="#">Shortcuts</a>-->
             <!--</li>-->
             <!--<li>-->
-                <!--<a href="#">Overview</a>-->
+            <!--<a href="#">Overview</a>-->
             <!--</li>-->
             <!--<li>-->
-                <!--<a href="#">Events</a>-->
+            <!--<a href="#">Events</a>-->
             <!--</li>-->
             <li>
                 <a href="#">About</a>
             </li>
             <!--<li>-->
-                <!--<a href="#">Services</a>-->
+            <!--<a href="#">Services</a>-->
             <!--</li>-->
             <li>
                 <a href="#">Contact</a>
@@ -69,14 +69,32 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Welcome</h1>
+
                     <p>This is my personal website </p>
                     <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>-->
 
 
-                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+
                 </div>
             </div>
+            <div class="page-content">
+                <!-- Left side bar -->
+                <div id='leftContent' class='col-md-3'>
+                    <a href="#" class="thumbnail"><img src="img/me.jpg" alt="Me!"></a>
+                </div>
+
+                <div id='rightContent' class='col-md-3'>
+                    <h3 id='linkSectionTitle' class='text-muted'>Links to My Stuff</h3>
+                    <a href='https://github.com/locdle' rel="me"><img class='socialIconLink' src='img/github_social_circle.svg'></a>
+                    <a href='https://www.linkedin.com/profile/view?id=205806082&trk=nav_responsive_tab_profile_pic' rel="me"><img class='socialIconLink' src='img/linkedin_social_circle.svg'></a>
+                    <a href='https://www.facebook.com/duc.loc.1' rel="me"><img class='socialIconLink' src='img/facebook_social_circle.svg'></a>
+                </div>
+
+
+            </div>
+
         </div>
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -91,11 +109,19 @@
 
 <!-- Menu Toggle Script -->
 <script>
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
 
     });
+    $("About").click(function () {
+        loadPage('about')
+    })
+
+    function loadPage(pageid) {
+        $('.mainContentContainer').html('');
+        $('.mainContentContainer').load('views/' + pageid + '.html');
+    }
 </script>
 
 </body>
