@@ -18,7 +18,7 @@
             var myOptions = {
                 zoom: 15,
                 center: new google.maps.LatLng(45.509534, -122.681081),
-                mapTypeId: google.maps.MapTypeId.HYBRID,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
                 mapTypeControlOptions: {
                     mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.SATELLITE]
                 },
@@ -49,7 +49,7 @@
     </script>
 </head>
 <body onload="Init()">
-<p style="margin:0;padding:10px;">Draw the route on the map. Hold shift to prevent a line segment from snapping to roads.</p>
+<p style="margin:0;padding:10px;">Draw the route on the map</p>
 <div id="map_canvas"></div>
 </body>
 </html>
