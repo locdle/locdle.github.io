@@ -17,6 +17,14 @@
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
+    <!-- material CSS -->
+    <link href="bower_components/bootstrap-material-design/dist/css/material.css">
+    <link href="bower_components/bootstrap-material-design/dist/css/material-wfont.css">
+    <link href="bower_components/bootstrap-material-design/dist/css/material-wfont.min.css">
+    <link href="bower_components/bootstrap-material-design/dist/css/material.css">
+    <link href="bower_components/bootstrap-material-design/dist/css/ripples.css">
+    <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,41 +35,37 @@
 </head>
 
 <body>
-
-<div id="wrapper">
-
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                    Menu
-                </a>
-            </li>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <!--<li>-->
-            <!--<a href="#">Shortcuts</a>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<a href="#">Overview</a>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<a href="#">Events</a>-->
-            <!--</li>-->
-            <li>
-                <a href="#">About</a>
-            </li>
-            <!--<li>-->
-            <!--<a href="#">Services</a>-->
-            <!--</li>-->
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="javascript:void(0)">Loc Le</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="javascript:void(0)">Resume</a></li>
+                <li class="active"><a href="calendar.html">Calendar</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Project<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Vagus</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)">Airline Application</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)">Private Adventure</a></li>
+                        <!--<li class="divider"></li>-->
+                        <!--<li class="dropdown-header">Dropdown header</li>-->
+                        <!--<li><a href="javascript:void(0)">Separated link</a></li>-->
+                        <!--<li><a href="javascript:void(0)">One more separated link</a></li>-->
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-    <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
@@ -72,8 +76,6 @@
 
                     <p>This is my personal website </p>
                     <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>-->
-
-
 
                 </div>
             </div>
@@ -89,20 +91,15 @@
                     <a href='https://www.linkedin.com/profile/view?id=205806082&trk=nav_responsive_tab_profile_pic' rel="me"><img class='socialIconLink' src='img/linkedin_social_circle.svg'></a>
                     <a href='https://www.facebook.com/duc.loc.1' rel="me"><img class='socialIconLink' src='img/facebook_social_circle.svg'></a>
                 </div>
-
-
             </div>
-
         </div>
-        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-    </div>
-    <!-- /#page-content-wrapper -->
 
-</div>
-<!-- /#wrapper -->
+    </div>
+
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
@@ -114,15 +111,13 @@
         $("#wrapper").toggleClass("toggled");
 
     });
-    $("About").click(function () {
-        loadPage('about')
-    })
-
-    function loadPage(pageid) {
-        $('.mainContentContainer').html('');
-        $('.mainContentContainer').load('views/' + pageid + '.html');
-    }
 </script>
+
+<script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+<script src="bower_components/bootstrap-material-design/dist/css/ripples.css"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+
 
 </body>
 
