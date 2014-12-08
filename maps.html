@@ -58,7 +58,7 @@
             }
 
             map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-            poly = new google.maps.Polyline({ map: map });
+            poly = new google.maps.Polyline({ map: map, strokeColor: '#FF0000' });
             google.maps.event.addListener(map, "click", function(evt) {
                 if (shiftPressed || path.getLength() === 0) {
                     path.push(evt.latLng);
