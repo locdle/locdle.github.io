@@ -1,4 +1,4 @@
-<html>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -16,6 +16,6 @@ $accesssecret = "6BBNaIdAcIYyjsdAMm9ohfZt514ju562lGlcFM0w7sF9j";
 
 $connection = new TwitterOAuth($apikey, $apisecret, $apitoken, $accesssecret);
 
-print_r($connection);
+$tweets = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2");
+print_r($tweets);
 ?>
-</html>
