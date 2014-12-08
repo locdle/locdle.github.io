@@ -15,17 +15,7 @@ $accesssecret = "6BBNaIdAcIYyjsdAMm9ohfZt514ju562lGlcFM0w7sF9j";
 
 $connection = new TwitterOAuth($apikey, $apisecret, $apitoken, $accesssecret);
 
-$response = $connection->get("https://api.twitter.com/1.1/statuses/home_timeline.json?count=100");
-
-foreach ($response as $tweet) {
-
-    $favorites->$tweet->favorite_count;
-
-    if ($favorites >= 2) {
-
-        $embed = $connection->get("https://api.twitter.com/1.1/statuses/oembed.json?id=" . $tweet->id);
-        echo $embed->html;
-    }
+print_r($connection);
 
 }
 ?>
