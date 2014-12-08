@@ -1,3 +1,4 @@
+<html>
 <?php
 /**
  * Created by PhpStorm.
@@ -16,6 +17,5 @@ $accesssecret = "6BBNaIdAcIYyjsdAMm9ohfZt514ju562lGlcFM0w7sF9j";
 $connection = new TwitterOAuth($apikey, $apisecret, $apitoken, $accesssecret);
 
 print_r($connection);
-
-}
 ?>
+</html>
