@@ -1,4 +1,4 @@
-
+<html>
 <?php
 /**
  * Created by PhpStorm.
@@ -30,3 +30,5 @@ foreach($response as $tweet) {
 
 }
 ?>
+</html>
+
