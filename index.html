@@ -35,6 +35,17 @@
 </head>
 
 <body>
+<!-- JavaScript SDK for Facebook -->
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=382162055276973&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -52,16 +63,16 @@
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Project<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0)">Vagus</a></li>
-                    <li class="divider"></li>
-                    <li><a href="javascript:void(0)">Airline Application</a></li>
-                    <li class="divider"></li>
-                    <li><a href="javascript:void(0)">Private Adventure</a></li>
-                    <li class="divider"></li>
+                    <!--<li><a href="javascript:void(0)">Vagus</a></li>-->
+                    <!--<li class="divider"></li>-->
+                    <!--<li><a href="javascript:void(0)">Airline Application</a></li>-->
+                    <!--<li class="divider"></li>-->
+                    <!--<li><a href="javascript:void(0)">Private Adventure</a></li>-->
+                    <!--<li class="divider"></li>-->
                     <li><a href="maps.html">Google Map APIs</a></li>
                 </ul>
             </li>
-            <li ><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 </div>
@@ -77,7 +88,6 @@
 
                 <p>This is my personal website which host via <a href="https://pages.github.com/">GitHub Pages</a></p>
                 <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>-->
-
             </div>
         </div>
         <div class="page-content">
@@ -85,35 +95,47 @@
             <div id='leftContent' class='col-md-2'>
                 <a href="#" class="thumbnail"><img src="img/me.jpg" alt="Me!"></a>
             </div>
-
             <div id='midContent' class='col-md-4'>
-                <p>My name is Loc Le, and I am a computer science, software development, photography</a>, and video gaming.</p>
+                <p>My name is Loc Le, and I am a computer science, software development, photography</a>, and video
+                    gaming.</p>
+
                 <p>I will graduate at the March 2015, and I'm looking for mobile development applications job.
                     I'm interested in mobile because I can test or run the product in my hand.</p>
+
                 <p>This site is used for web development and all accomplished projects which I have done.</p>
 
                 <h3 id='linkSectionTitle' class='text-muted'>Links to My Stuff</h3>
                 <a href='https://github.com/locdle' rel="me"><img class='socialIconLink'
                                                                   src='img/github_social_circle.svg'></a>
-                <a href='https://www.linkedin.com/profile/view?id=205806082&trk=nav_responsive_tab_profile_pic'
+                <a href='https://www.linkedin.com/pub/loc-le/58/b10/8aa'
                    rel="me"><img class='socialIconLink' src='img/linkedin_social_circle.svg'></a>
                 <a href='https://www.facebook.com/duc.loc.1' rel="me"><img class='socialIconLink'
                                                                            src='img/facebook_social_circle.svg'></a>
-                <!--<a class="twitter-timeline"  href="https://twitter.com/ducloc1803" data-widget-id="542063622185185280">Tweets by @ducloc1803</a>-->
+
             </div>
-            <div id = "rightContent" class="col-md-6">
+            <!--twetter api-->
+            <div id="rightContent" class="col-md-6">
                 <a class="twitter-timeline"
+                   width="400"
+                   heigh="100"
                    href="https://twitter.com/twitterdev"
-                   data-widget-id="542063622185185280">
+                   data-widget-id="542063622185185280"
+                   data-tweet-limit="4">
                     Tweets by @ducloc1803
                 </a>
                 <script type="text/javascript">
                     window.twttr = (function (d, s, id) {
                         var t, js, fjs = d.getElementsByTagName(s)[0];
                         if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id; js.src= "https://platform.twitter.com/widgets.js";
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://platform.twitter.com/widgets.js";
                         fjs.parentNode.insertBefore(js, fjs);
-                        return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+                        return window.twttr || (t = {
+                            _e: [], ready: function (f) {
+                                t._e.push(f)
+                            }
+                        });
                     }(document, "script", "twitter-wjs"));
                 </script>
             </div>
@@ -122,23 +144,12 @@
 
 </div>
 
-
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 <script src="bower_components/jquery/dist/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
-
-<!-- Menu Toggle Script -->
-<script>
-    $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-
-    });
-</script>
-
 <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
 <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
 <script src="bower_components/bootstrap-material-design/dist/css/ripples.css"></script>
